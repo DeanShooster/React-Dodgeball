@@ -11,8 +11,10 @@
 <h2 align="center">About The Application </h2>
 It is built with React.
 
+
 - Animation driven dodgeball game.
 - Optimization with render tree.
+- Speed Exercise.
 
 <hr>
 <h2 align="center">Build With </h2>
