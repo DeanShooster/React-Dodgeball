@@ -1,0 +1,38 @@
+$ball-size: 100px;
+$stripe-color: #ffffff;
+$stripe-width: 10px;
+$stripe-gap: 2px;
+$background-color: #c8c7c7;
+$texture-size: 8px;
+$texture-color: #ffffff;
+
+.ball {
+    width: $ball-size; height: $ball-size;
+    position: absolute; z-index: 100;
+    border-radius: 50%;
+    background: $background-color;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+        background: radial-gradient($texture-color 0% 20%, $background-color 20% 100%) 0 0 / 8px 8px repeat;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        width: $stripe-width; height: $ball-size;
+        position: absolute; top: 50%; left: 50%;
+        background: $stripe-color;
+        transform: translate(-50%, -50%) rotate(45deg);
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute; top: $stripe-gap; left: 0; right: 0; bottom: $stripe-gap;
+            background: $stripe-color;
+        }
+  }
+}
